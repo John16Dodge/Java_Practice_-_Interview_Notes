@@ -1,0 +1,89 @@
+Polymorphism is an OOP concept that means "many forms." It allows an object to take on different behaviors depending on the context. In Java, this is achieved through method overloading and method overriding.
+
+Interview Questions
+
+1. What is Polymorphism? 🤔
+Answer: Polymorphism is an OOP principle that allows a single method or operator to have different behaviors depending on the object it's called on. It means "many forms."
+
+2. What are the two types of Polymorphism?
+Answer: The two types are compile-time polymorphism (achieved through method overloading) and run-time polymorphism (achieved through method overriding).
+
+3. What is the difference between Method Overloading and Method Overriding? 🆚
+Answer:
+
+Overloading: Same method name, different parameters, happens in the same class, and is resolved at compile time.
+
+Overriding: Same method signature (name and parameters), happens in different classes (parent-child relationship), and is resolved at run time.
+
+4. Can you overload a method in a subclass?
+Answer: Yes, you can overload a method in a subclass just like you can in any other class. This is distinct from overriding, which involves the parent and child classes.
+
+5. Why is polymorphism important? 🚀
+Answer: It makes code more flexible and extensible. It allows you to write generic code that can work with objects of different types, as long as they share a common superclass or interface.
+
+
+Code Examples
+1. Method Overloading (Compile-time Polymorphism)
+This occurs when a class has multiple methods with the same name but different parameters (number, type, or order). The correct method to call is determined by the compiler at compile time.
+
+Java
+
+class Calculator {
+    // Method to add two integers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method to add three integers
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded method to add two doubles
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(2, 3));        // Calls the first method
+        System.out.println(calc.add(2, 3, 4));     // Calls the second method
+        System.out.println(calc.add(2.5, 3.5));    // Calls the third method
+    }
+}
+2. Method Overriding (Run-time Polymorphism)
+This occurs when a subclass provides its own specific implementation for a method that is already defined in its superclass. The correct method to call is decided at run time by the Java Virtual Machine (JVM).
+
+Java
+
+class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a generic sound.");
+    }
+}
+
+class Dog extends Animal {
+    @Override // Optional but recommended annotation
+    public void makeSound() {
+        System.out.println("The dog barks.");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("The cat meows.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog(); // A Dog object with an Animal reference
+        Animal myCat = new Cat(); // A Cat object with an Animal reference
+        
+        myDog.makeSound(); // Output: The dog barks.
+        myCat.makeSound(); // Output: The cat meows.
+    }
+}
