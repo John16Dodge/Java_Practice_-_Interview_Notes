@@ -1,0 +1,44 @@
+Definition: Inheritance is a mechanism where a new class (subclass) can inherit properties and behaviors from an existing class (superclass). This promotes code reuse and establishes an "is-a" relationship, like a "Dog" is an "Animal."
+
+// Superclass
+class Animal {
+    public void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Subclass inheriting from Animal
+class Dog extends Animal {
+    public void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat(); // Inherited from Animal
+        myDog.bark(); // Specific to Dog
+    }
+}
+
+INTERVIEW QUESTIONS : 
+1. What is Inheritance? 🤔
+Answer: Inheritance is an OOP mechanism where one class (subclass or child class) can inherit properties and behaviors from another class (superclass or parent class). It creates an "is-a" relationship, like "a car is a vehicle."
+
+2. What is the main benefit of using Inheritance? 🚀
+Answer: The primary benefit is code reusability. It allows a subclass to reuse code from a superclass, reducing redundancy and making the code easier to maintain.
+
+3. How do you implement Inheritance in Java? ✍️
+Answer: You use the extends keyword. For example, class Dog extends Animal means the Dog class inherits from the Animal class.
+
+4. What is the difference between extends and implements? الفرق بينهما
+Answer:
+
+extends is used for inheritance between classes. It establishes an "is-a" relationship. A class can only extend one other class.
+
+implements is used to make a class adhere to a specific interface. A class can implement multiple interfaces.
+
+5. What is Method Overriding? How is it related to Inheritance? 🔄
+Answer: Method overriding is when a subclass provides its own specific implementation of a method that is already defined in its superclass. This is a core concept of polymorphism that relies on inheritance to work. The method signature (name and parameters) must be the same in both classes.
+
