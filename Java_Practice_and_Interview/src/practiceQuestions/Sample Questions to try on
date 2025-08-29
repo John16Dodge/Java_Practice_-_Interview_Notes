@@ -1,0 +1,12 @@
+Problem: Student Management System
+Design a simple Student Management System using OOP principles. Your system should be able to manage different types of students and calculate their grades.
+
+Requirements:
+
+Encapsulation: Create a base Student class with private attributes for name, id, and a list of grades. Provide public methods to set and get these attributes.
+
+Inheritance: Create two subclasses, UndergraduateStudent and GraduateStudent, that inherit from the Student class.
+
+Polymorphism: The Student class should have an abstract method called calculateGPA(). Each subclass should provide its own implementation of this method. UndergraduateStudent should calculate GPA on a scale of 4.0, while GraduateStudent should calculate GPA on a scale of 5.0.
+
+Abstraction: Use an abstract class for the Student base class to enforce that all student types must have a calculateGPA() method.
