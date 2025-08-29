@@ -1,0 +1,88 @@
+Abstraction   (VIDEO LINK : https://www.youtube.com/shorts/9oMSUusRSDc)
+Abstraction is an OOP principle that focuses on hiding complex implementation details and showing only the essential features of an object. It focuses on what an object does rather than how it does it. This helps simplify complex systems and makes code easier to use.
+
+Code Examples
+1. Abstract Class
+An abstract class is a class declared with the abstract keyword. It can have both abstract methods (without a body) and concrete methods (with a body). You cannot create an object of an abstract class directly.
+
+Java
+
+// Abstract class
+abstract class Vehicle {
+    private String color;
+
+    // Abstract method: no implementation here
+    public abstract void move();
+
+    // Concrete method: with an implementation
+    public void setColor(String c) {
+        this.color = c;
+    }
+}
+
+// Subclass implementing the abstract method
+class Car extends Vehicle {
+    @Override
+    public void move() {
+        System.out.println("The car drives on the road.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // You cannot instantiate an abstract class
+        // Vehicle v = new Vehicle(); // This would cause a compile-time error
+
+        Car myCar = new Car();
+        myCar.move();
+    }
+}
+2. Interface
+An interface is a blueprint of a class. It defines a set of abstract methods that a class must implement. A class can implement multiple interfaces, which is how Java achieves something similar to multiple inheritance.
+
+Java
+
+// Interface
+interface Shape {
+    double getArea(); // Method is implicitly abstract and public
+}
+
+// Class implementing the interface
+class Circle implements Shape {
+    private double radius;
+
+    public Circle(double r) {
+        this.radius = r;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle myCircle = new Circle(5.0);
+        System.out.println("Area: " + myCircle.getArea());
+    }
+}
+Interview Questions
+1. What is Abstraction? 🤔
+Answer: Abstraction is the process of hiding implementation details and showing only the essential features of an object. It focuses on the "what" rather than the "how."
+
+2. How is Abstraction achieved in Java? ⚙️
+Answer: It's achieved using abstract classes and interfaces.
+
+3. What is the difference between an Abstract Class and an Interface? 🆚
+Answer:
+
+Abstract Class: Can have both abstract and concrete methods. A class can only extend one abstract class. It can have constructors and member variables.
+
+Interface: Can only have abstract methods (before Java 8). A class can implement multiple interfaces. It cannot have constructors and its variables are public static final by default.
+
+4. Can you instantiate an abstract class or an interface? ❓
+Answer: No. Neither an abstract class nor an interface can be instantiated directly. They serve as templates for other classes.
+
+5. Why is Abstraction important in OOP? 🚀
+Answer: Abstraction helps manage complexity by simplifying the view of an object. It allows you to focus on the public behavior of a class without worrying about its internal workings, which makes the code more manageable and flexible.
