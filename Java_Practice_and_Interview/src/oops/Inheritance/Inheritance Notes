@@ -42,3 +42,32 @@ implements is used to make a class adhere to a specific interface. A class can i
 5. What is Method Overriding? How is it related to Inheritance? 🔄
 Answer: Method overriding is when a subclass provides its own specific implementation of a method that is already defined in its superclass. This is a core concept of polymorphism that relies on inheritance to work. The method signature (name and parameters) must be the same in both classes.
 
+TYPES OF INHERITANCE : 
+1. Single Inheritance
+This is the most basic form of inheritance. A single subclass inherits from a single superclass. This creates a simple parent-child relationship.
+
+Diagram: A -> B
+
+Example: A Dog class extends an Animal class.
+
+2. Multilevel Inheritance
+This involves a chain of inheritance. A subclass inherits from a class, which in turn inherits from another class.
+
+Diagram: A -> B -> C
+
+Example: A Puppy class extends a Dog class, and the Dog class extends an Animal class.
+
+3. Hierarchical Inheritance
+In this type, multiple subclasses inherit from a single superclass. This is useful when multiple related classes share common functionality from a single base class.
+
+Diagram: A -> B and A -> C
+
+Example: A Car class and a Bike class both extend a Vehicle class.
+
+4. Multiple Inheritance (Not Supported in Java Classes)
+This is a key point to remember for interviews. Java does not support multiple inheritance with classes. This means a class cannot extend more than one superclass. This restriction is in place to avoid the "Diamond Problem", which can cause ambiguity if two superclasses have a method with the same signature.
+
+However, Java can achieve similar functionality using interfaces. A class can implement multiple interfaces, thereby inheriting method signatures from multiple sources.
+
+5. Hybrid Inheritance (Achieved via a mix of Inheritance and Interfaces)
+Hybrid inheritance is a combination of two or more of the above types. Since it often involves multiple inheritance, it is not supported directly with classes in Java. You can, however, create a hybrid structure by combining single or multilevel inheritance with the use of interfaces.
