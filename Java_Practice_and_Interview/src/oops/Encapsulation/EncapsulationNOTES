@@ -20,3 +20,22 @@ public class Employee {
         return salary;
     }
 }
+
+INTERVIEW QUESTION : 
+1. What is Encapsulation? 🤔
+Answer: Encapsulation is the OOP principle of bundling data and the methods that operate on that data into a single unit, which is a class. It hides the internal state of an object and prevents direct access to its data from outside the class.
+
+2. How is Encapsulation Achieved in Java? ⚙️
+Answer: Encapsulation is achieved by declaring class variables as private and providing public methods (getters and setters) to access and modify those variables.
+
+3. What is the main purpose of Encapsulation? 🎯
+Answer: The main purpose is to protect data from being accidentally or maliciously changed. It provides control over how data is accessed and modified, ensuring the object's state remains valid.
+
+4. What are Getters and Setters? 🤝
+Answer:
+Getters are public methods used to retrieve (get) the value of a private variable.
+
+Setters are public methods used to modify (set) the value of a private variable. They can include validation logic to ensure data integrity.
+
+5. Why is Encapsulation considered a pillar of OOP? 🏰
+Answer: It's a fundamental pillar because it helps in achieving data hiding and loose coupling. It makes code easier to maintain and debug by keeping related data and behavior together and restricting external interference.
