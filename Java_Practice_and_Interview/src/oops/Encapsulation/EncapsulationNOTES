@@ -1,0 +1,22 @@
+Definition: Encapsulation is about bundling data (variables) and the methods that operate on that data into a single unit, a class. It hides the internal state of an object 
+            and protects data from being directly accessed or modified from outside the class.
+            
+           
+EXAMPLE CODE :
+ 
+public class Employee {
+    // Private data variable
+    private double salary;
+
+    // Public setter method to control access
+    public void setSalary(double newSalary) {
+        if (newSalary > 0) { // We can add validation logic here
+            this.salary = newSalary;
+        }
+    }
+    
+    // Public getter method to read data
+    public double getSalary() {
+        return salary;
+    }
+}
